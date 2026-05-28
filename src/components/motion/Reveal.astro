@@ -1,0 +1,10 @@
+---
+const { delay = 0, y = 24 } = Astro.props;
+
+const delayMs = `${Number(delay) * 1000}ms`;
+const yPx = `${Number(y)}px`;
+---
+
+<div data-reveal style={`--reveal-delay: ${delayMs}; --reveal-y: ${yPx};`}>
+  <slot />
+</div>

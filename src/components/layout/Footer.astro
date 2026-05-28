@@ -1,0 +1,58 @@
+---
+import Reveal from "../motion/Reveal.astro";
+import logo from "../../assets/images/logo-horizontal-dark.png";
+---
+
+<footer
+  class="relative overflow-hidden bg-[var(--color-dark)] py-14 text-white"
+>
+  <div
+    class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(126,217,87,0.08),transparent_35%)]"
+  >
+  </div>
+
+  <div class="container relative">
+    <div
+      class="flex flex-col gap-10 md:flex-row md:items-end md:justify-between"
+    >
+      <Reveal>
+        <div>
+          <img src={logo.src} alt="Armonía & Bienestar" class="h-14 w-auto" />
+
+          <p class="mt-6 max-w-md leading-7 text-white/55">
+            Bienestar, relajación y recuperación en un entorno cálido, moderno y
+            diseñado para desconectar del ritmo cotidiano.
+          </p>
+        </div>
+      </Reveal>
+
+      <Reveal delay={0.12}>
+        <div class="flex flex-col gap-3 text-sm text-white/45">
+          <a href="#servicios" class="transition duration-300 hover:text-white">
+            Servicios
+          </a>
+
+          <a href="#espacio" class="transition duration-300 hover:text-white">
+            Sobre el espacio
+          </a>
+
+          <a href="#contacto" class="transition duration-300 hover:text-white">
+            Contacto
+          </a>
+        </div>
+      </Reveal>
+    </div>
+
+    <div class="mt-14 h-px w-full bg-white/10"></div>
+
+    <Reveal delay={0.18}>
+      <div
+        class="mt-8 flex flex-col gap-4 text-sm text-white/35 md:flex-row md:items-center md:justify-between"
+      >
+        <p>© 2026 Armonía & Bienestar. Todos los derechos reservados.</p>
+
+        <p>Diseñado con una experiencia moderna y minimalista.</p>
+      </div>
+    </Reveal>
+  </div>
+</footer>

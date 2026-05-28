@@ -1,0 +1,48 @@
+---
+import { faq } from "../../data/faq";
+import Reveal from "../motion/Reveal.astro";
+---
+
+<section class="relative bg-[var(--color-bg-soft)] py-24 md:py-32">
+  <div class="container max-w-4xl">
+    <div class="text-center">
+      <Reveal>
+        <p
+          class="mb-4 text-sm font-medium uppercase tracking-[0.28em] text-black/45"
+        >
+          FAQ
+        </p>
+      </Reveal>
+
+      <Reveal delay={0.08}>
+        <h2
+          class="heading text-balance text-5xl font-semibold leading-[0.95] md:text-7xl"
+        >
+          Preguntas frecuentes
+        </h2>
+      </Reveal>
+    </div>
+
+    <div class="mt-16 space-y-4">
+      {
+        faq.map((item, index) => (
+          <Reveal delay={0.08 + index * 0.06}>
+            <details class="group rounded-[1.75rem] border border-black/10 bg-white/40 p-7 transition duration-300 hover:bg-white/55">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-6">
+                <span class="text-lg font-medium">{item.question}</span>
+
+                <span class="text-2xl text-black/35 transition duration-300 group-open:rotate-45">
+                  +
+                </span>
+              </summary>
+
+              <p class="mt-5 max-w-2xl leading-7 text-[var(--color-muted)]">
+                {item.answer}
+              </p>
+            </details>
+          </Reveal>
+        ))
+      }
+    </div>
+  </div>
+</section>

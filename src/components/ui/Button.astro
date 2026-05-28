@@ -1,0 +1,21 @@
+---
+const { href = "#contacto", variant = "primary" } = Astro.props;
+
+const classes = {
+  primary:
+    "bg-[var(--color-text)] text-white hover:bg-[var(--color-accent-dark)]",
+  secondary:
+    "bg-transparent text-[var(--color-text)] border border-black/15 hover:border-black/40",
+};
+---
+
+<a
+  href={href}
+  class:list={[
+    "inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium transition-all duration-300 ease-out",
+    "focus-visible:outline focus-visible:outline-offset-4 focus-visible:outline-(--color-accent)",
+    classes[variant as keyof typeof classes],
+  ]}
+>
+  <slot />
+</a>

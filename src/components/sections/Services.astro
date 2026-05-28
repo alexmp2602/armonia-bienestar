@@ -1,0 +1,57 @@
+---
+import { services } from "../../data/services";
+import Reveal from "../motion/Reveal.astro";
+---
+
+<section id="servicios" class="relative bg-[var(--color-bg)] py-24 md:py-32">
+  <div class="container">
+    <div class="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+      <Reveal>
+        <div>
+          <p
+            class="mb-4 text-sm font-medium uppercase tracking-[0.28em] text-black/45"
+          >
+            Servicios
+          </p>
+
+          <h2
+            class="heading text-balance text-5xl font-semibold leading-[0.95] md:text-6xl"
+          >
+            Tratamientos para volver al equilibrio.
+          </h2>
+
+          <p class="mt-6 max-w-md text-lg leading-8 text-[var(--color-muted)]">
+            Cada sesión está pensada para acompañar el descanso, la recuperación
+            física y una experiencia de bienestar sobria, profesional y cuidada.
+          </p>
+        </div>
+      </Reveal>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        {
+          services.map((service, index) => (
+            <Reveal delay={0.08 + index * 0.08}>
+              <article class="group h-full rounded-[1.75rem] border border-black/10 bg-white/35 p-7 transition duration-300 hover:-translate-y-1 hover:bg-white/55">
+                <span class="mb-10 block text-sm text-black/35">
+                  0{index + 1}
+                </span>
+
+                <h3 class="heading text-3xl font-semibold leading-none">
+                  {service.title}
+                </h3>
+
+                <p class="mt-5 text-base leading-7 text-[var(--color-muted)]">
+                  {service.description}
+                </p>
+
+                <div class="mt-8 h-px w-full bg-black/10">
+                  <div class="h-px w-0 bg-[var(--color-accent-dark)] transition-all duration-500 group-hover:w-full" />
+                </div>
+              </article>
+            </Reveal>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

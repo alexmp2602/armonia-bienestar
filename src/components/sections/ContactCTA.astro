@@ -1,0 +1,86 @@
+---
+import Button from "../ui/Button.astro";
+import Reveal from "../motion/Reveal.astro";
+
+const whatsappUrl =
+  "https://wa.me/5492616215017?text=Hola%2C%20quiero%20consultar%20por%20un%20turno%20en%20Armon%C3%ADa%20%26%20Bienestar";
+---
+
+<section
+  id="contacto"
+  class="relative overflow-hidden bg-[var(--color-bg)] py-24 md:py-32"
+>
+  <div class="container">
+    <div
+      class="relative overflow-hidden rounded-[2.5rem] bg-[var(--color-dark)] px-6 py-16 text-white md:px-12 md:py-20 lg:px-20"
+    >
+      <div
+        class="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[var(--color-accent)]/15 blur-3xl"
+      >
+      </div>
+
+      <div
+        class="absolute -bottom-24 left-10 h-72 w-72 rounded-full bg-white/[0.06] blur-3xl"
+      >
+      </div>
+
+      <div class="relative grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+        <div>
+          <Reveal>
+            <p
+              class="mb-4 text-sm font-medium uppercase tracking-[0.28em] text-white/45"
+            >
+              Reservá tu momento
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.08}>
+            <h2
+              class="heading text-balance text-5xl font-semibold leading-[0.95] md:text-7xl"
+            >
+              Regalate una pausa real.
+            </h2>
+          </Reveal>
+
+          <Reveal delay={0.16}>
+            <p class="mt-6 max-w-xl text-lg leading-8 text-white/65">
+              Coordiná tu turno por WhatsApp y consultá el tratamiento más
+              adecuado según tu necesidad, nivel de tensión o búsqueda de
+              bienestar.
+            </p>
+          </Reveal>
+        </div>
+
+        <Reveal delay={0.24} y={28}>
+          <div
+            class="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 transition duration-500 hover:bg-white/[0.06] md:p-8"
+          >
+            <p class="text-sm uppercase tracking-[0.22em] text-white/40">
+              contacto directo
+            </p>
+
+            <p class="mt-4 text-2xl font-medium leading-tight">
+              Atención personalizada para ayudarte a elegir el mejor
+              tratamiento.
+            </p>
+
+            <div class="mt-8">
+              <Button
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Escribir por WhatsApp
+              </Button>
+            </div>
+
+            <p class="mt-5 text-sm leading-6 text-white/45">
+              Respondemos consultas sobre disponibilidad, servicios y modalidad
+              de atención.
+            </p>
+          </div>
+        </Reveal>
+      </div>
+    </div>
+  </div>
+</section>

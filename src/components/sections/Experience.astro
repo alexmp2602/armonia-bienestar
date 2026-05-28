@@ -1,0 +1,93 @@
+---
+import Reveal from "../motion/Reveal.astro";
+---
+
+<section
+  id="experiencia"
+  class="relative overflow-hidden bg-[var(--color-dark)] py-24 text-white md:py-32"
+>
+  <div class="container">
+    <div class="grid gap-14 lg:grid-cols-[1fr_1.1fr] lg:items-end">
+      <Reveal>
+        <div>
+          <p
+            class="mb-4 text-sm font-medium uppercase tracking-[0.28em] text-white/45"
+          >
+            Experiencia
+          </p>
+
+          <h2
+            class="heading text-balance text-5xl font-semibold leading-[0.95] md:text-7xl"
+          >
+            Un momento para bajar el ritmo.
+          </h2>
+        </div>
+      </Reveal>
+
+      <Reveal delay={0.1}>
+        <p class="max-w-xl text-lg leading-8 text-white/65 lg:ml-auto">
+          La experiencia está diseñada para que cada detalle acompañe una
+          sensación de calma: desde el ambiente hasta la atención, el ritmo de
+          la sesión y la forma en que el cuerpo vuelve progresivamente al
+          equilibrio.
+        </p>
+      </Reveal>
+    </div>
+
+    <div class="mt-16 grid gap-4 md:grid-cols-3">
+      <Reveal delay={0.08}>
+        <article
+          class="group h-full rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-7 transition duration-500 hover:-translate-y-1 hover:bg-white/[0.06]"
+        >
+          <span
+            class="mb-10 block h-2 w-2 rounded-full bg-[var(--color-accent)] transition duration-500 group-hover:scale-125"
+          >
+          </span>
+
+          <h3 class="heading text-3xl font-semibold">Relajación profunda</h3>
+
+          <p class="mt-5 leading-7 text-white/60">
+            Un espacio cuidado para soltar tensiones físicas y mentales sin
+            estímulos excesivos.
+          </p>
+        </article>
+      </Reveal>
+
+      <Reveal delay={0.16}>
+        <article
+          class="group h-full rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-7 transition duration-500 hover:-translate-y-1 hover:bg-white/[0.06]"
+        >
+          <span
+            class="mb-10 block h-2 w-2 rounded-full bg-[var(--color-accent)] transition duration-500 group-hover:scale-125"
+          >
+          </span>
+
+          <h3 class="heading text-3xl font-semibold">Atención personalizada</h3>
+
+          <p class="mt-5 leading-7 text-white/60">
+            Cada tratamiento se adapta al estado del cuerpo, el nivel de tensión
+            y la necesidad de cada persona.
+          </p>
+        </article>
+      </Reveal>
+
+      <Reveal delay={0.24}>
+        <article
+          class="group h-full rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-7 transition duration-500 hover:-translate-y-1 hover:bg-white/[0.06]"
+        >
+          <span
+            class="mb-10 block h-2 w-2 rounded-full bg-[var(--color-accent)] transition duration-500 group-hover:scale-125"
+          >
+          </span>
+
+          <h3 class="heading text-3xl font-semibold">Ambiente sereno</h3>
+
+          <p class="mt-5 leading-7 text-white/60">
+            Una estética sobria, cálida y minimalista pensada para desconectar
+            del ruido cotidiano.
+          </p>
+        </article>
+      </Reveal>
+    </div>
+  </div>
+</section>

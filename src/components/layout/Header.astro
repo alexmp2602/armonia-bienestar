@@ -1,0 +1,29 @@
+---
+import logo from "../../assets/logo.png";
+import Button from "../ui/Button.astro";
+---
+
+<header
+  class="fixed left-0 top-0 z-50 w-full border-b border-black/5 bg-[#f5f2ed]/80 backdrop-blur-xl"
+>
+  <div class="container flex h-20 items-center justify-between">
+    <a
+      href="/"
+      class="flex items-center gap-3"
+      aria-label="Armonía & Bienestar"
+    >
+      <img src="/src/assets/images/logo-horizontal-sin-fondo.png" alt="Armonía & Bienestar" class="h-12 w-auto" />
+    </a>
+
+    <nav class="hidden items-center gap-8 text-sm text-black/70 md:flex">
+      <a href="#servicios" class="transition hover:text-black">Servicios</a>
+      <a href="#experiencia" class="transition hover:text-black">Experiencia</a>
+      <a href="#espacio" class="transition hover:text-black">Espacio</a>
+      <a href="#contacto" class="transition hover:text-black">Contacto</a>
+    </nav>
+
+    <div class="hidden md:block">
+      <Button href="#contacto">Reservar turno</Button>
+    </div>
+  </div>
+</header>
