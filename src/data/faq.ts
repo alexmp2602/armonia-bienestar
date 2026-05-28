@@ -1,22 +1,37 @@
 export const faq = [
   {
-    question: "¿Cómo puedo reservar un turno?",
+    question: "¿Cómo puedo coordinar un turno?",
     answer:
-      "Podés coordinar tu turno directamente por WhatsApp para consultar disponibilidad y tratamientos.",
+      "Podés reservar directamente por WhatsApp para consultar disponibilidad, tratamientos y tipo de atención según lo que estés buscando.",
   },
+
   {
     question: "¿Los tratamientos son personalizados?",
     answer:
-      "Sí. Cada sesión se adapta según el nivel de tensión, necesidad corporal y experiencia buscada.",
+      "Sí. Cada sesión se adapta al nivel de tensión, necesidad corporal y objetivo de bienestar de cada persona.",
   },
+
   {
-    question: "¿Es necesario tener experiencia previa en masajes?",
+    question: "¿Atienden únicamente a hombres?",
     answer:
-      "No. Las sesiones están pensadas para acompañar tanto a personas que ya realizan tratamientos como a quienes buscan comenzar.",
+      "El espacio está orientado principalmente a bienestar y cuidado personal masculino, aunque también se ofrecen servicios unisex.",
   },
+
+  {
+    question: "¿Necesito experiencia previa en masajes o tratamientos?",
+    answer:
+      "No. Las sesiones están pensadas tanto para quienes ya incorporan este tipo de cuidado personal como para quienes buscan comenzar.",
+  },
+
   {
     question: "¿Qué tipo de ambiente ofrecen?",
     answer:
-      "Un espacio cálido, profesional y minimalista pensado para transmitir calma y desconexión.",
+      "Un entorno moderno, reservado y profesional, diseñado para relajación, recuperación física y cuidado personal sin excesos visuales.",
+  },
+
+  {
+    question: "¿Trabajan únicamente con reserva previa?",
+    answer:
+      "Sí. La atención se realiza con coordinación previa para asegurar una experiencia más cómoda, personalizada y tranquila.",
   },
 ];

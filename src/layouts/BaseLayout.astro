@@ -3,15 +3,17 @@ import "../styles/global.css";
 import RevealScript from "../components/motion/RevealScript.astro";
 
 const {
-  title = "Armonía & Bienestar | Terapia de Masajes",
-  description = "Un espacio de bienestar, relajación y recuperación física diseñado para desconectar del ritmo diario.",
+  title = "Armonía & Bienestar | Bienestar Masculino Premium",
+  description = "Masajes, recuperación corporal y cuidado personal masculino en un espacio moderno, sobrio y diseñado para desconectar.",
   image = "/og-image.jpg",
   url = "https://armonia-bienestar.vercel.app/",
 } = Astro.props;
+
+const canonicalUrl = url.endsWith("/") ? url : `${url}/`;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es-AR">
   <head>
     <!-- Basic -->
     <meta charset="UTF-8" />
@@ -22,22 +24,27 @@ const {
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#F5F2ED" />
+    <meta name="format-detection" content="telephone=no" />
 
     <!-- Canonical -->
-    <link rel="canonical" href={url} />
+    <link rel="canonical" href={canonicalUrl} />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_AR" />
-
+    <meta property="og:site_name" content="Armonía & Bienestar" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={url} />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={image} />
-    <meta property="og:site_name" content="Armonía & Bienestar" />
+    <meta
+      property="og:image:alt"
+      content="Armonía & Bienestar, bienestar masculino premium"
+    />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -45,8 +52,28 @@ const {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
 
-    <!-- Performance -->
-    <meta name="format-detection" content="telephone=no" />
+    <!-- Structured data -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "HealthAndBeautyBusiness",
+        name: "Armonía & Bienestar",
+        description,
+        url: canonicalUrl,
+        image,
+        telephone: "+5492616215017",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Avenida Pedro Molina 789",
+          addressLocality: "Ciudad",
+          addressRegion: "Mendoza",
+          addressCountry: "AR",
+        },
+        areaServed: "Mendoza, Argentina",
+        sameAs: [],
+      })}
+    />
   </head>
 
   <body>

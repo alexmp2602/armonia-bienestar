@@ -12,33 +12,94 @@ import logo from "../../assets/images/logo-horizontal-dark.png";
   </div>
 
   <div class="container relative">
-    <div
-      class="flex flex-col gap-10 md:flex-row md:items-end md:justify-between"
-    >
+    <div class="grid gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-end">
       <Reveal>
         <div>
-          <img src={logo.src} alt="Armonía & Bienestar" class="h-14 w-auto" />
+          <img
+            src={logo.src}
+            alt="Armonía & Bienestar"
+            class="h-14 w-auto select-none"
+            draggable="false"
+          />
 
           <p class="mt-6 max-w-md leading-7 text-white/55">
-            Bienestar, relajación y recuperación en un entorno cálido, moderno y
-            diseñado para desconectar del ritmo cotidiano.
+            Bienestar masculino, recuperación corporal y cuidado personal en un
+            entorno moderno, sobrio y profesional.
           </p>
         </div>
       </Reveal>
 
       <Reveal delay={0.12}>
-        <div class="flex flex-col gap-3 text-sm text-white/45">
-          <a href="#servicios" class="transition duration-300 hover:text-white">
-            Servicios
-          </a>
+        <div
+          class="grid gap-10 sm:grid-cols-2 md:justify-self-end md:text-right"
+        >
+          <div>
+            <p
+              class="mb-4 text-sm font-medium uppercase tracking-[0.22em] text-white/35"
+            >
+              Navegación
+            </p>
 
-          <a href="#espacio" class="transition duration-300 hover:text-white">
-            Sobre el espacio
-          </a>
+            <nav class="flex flex-col gap-3 text-sm text-white/45">
+              <a
+                href="#servicios"
+                class="transition duration-300 hover:text-white"
+              >
+                Servicios
+              </a>
 
-          <a href="#contacto" class="transition duration-300 hover:text-white">
-            Contacto
-          </a>
+              <a
+                href="#experiencia"
+                class="transition duration-300 hover:text-white"
+              >
+                Experiencia
+              </a>
+
+              <a
+                href="#espacio"
+                class="transition duration-300 hover:text-white"
+              >
+                Espacio
+              </a>
+
+              <a
+                href="#contacto"
+                class="transition duration-300 hover:text-white"
+              >
+                Contacto
+              </a>
+            </nav>
+          </div>
+
+          <div>
+            <p
+              class="mb-4 text-sm font-medium uppercase tracking-[0.22em] text-white/35"
+            >
+              Contacto
+            </p>
+
+            <div class="flex flex-col gap-3 text-sm text-white/45">
+              <a
+                href="https://wa.me/5492616215017"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="transition duration-300 hover:text-white"
+              >
+                +54 9 261 621 5017
+              </a>
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Avenida+Pedro+Molina+789+Mendoza"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="transition duration-300 hover:text-white"
+              >
+                Avenida Pedro Molina 789
+              </a>
+
+              <span> Ciudad, Mendoza </span>
+            </div>
+          </div>
         </div>
       </Reveal>
     </div>
@@ -51,7 +112,7 @@ import logo from "../../assets/images/logo-horizontal-dark.png";
       >
         <p>© 2026 Armonía & Bienestar. Todos los derechos reservados.</p>
 
-        <p>Diseñado con una experiencia moderna y minimalista.</p>
+        <p>Diseño minimalista para una experiencia de bienestar premium.</p>
       </div>
     </Reveal>
   </div>

@@ -12,27 +12,30 @@ import spaceImage from "../../assets/images/space-wellness.webp";
       class="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-20"
     >
       <Reveal y={32}>
-        <div class="relative overflow-hidden rounded-[2rem] bg-[#ddd6cd]">
+        <div
+          class="relative overflow-hidden rounded-[2.5rem] bg-[#ddd6cd] shadow-2xl shadow-black/[0.06]"
+        >
           <img
             src={spaceImage.src}
-            alt="Interior premium de Armonía & Bienestar"
+            alt="Interior sobrio y premium de Armonía & Bienestar"
             class="aspect-[4/5] h-full w-full object-cover"
           />
 
           <div
-            class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent"
+            class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent"
           >
           </div>
 
           <div
-            class="absolute bottom-6 left-6 right-6 rounded-3xl bg-white/60 p-5 backdrop-blur-md"
+            class="absolute bottom-6 left-6 right-6 rounded-[1.75rem] border border-white/10 bg-white/55 p-5 backdrop-blur-md"
           >
             <p class="text-sm uppercase tracking-[0.22em] text-black/45">
-              espacio cuidado
+              espacio reservado
             </p>
 
             <p class="mt-3 max-w-sm text-lg leading-7 text-black/75">
-              Un entorno cálido, limpio y sereno para acompañar cada sesión.
+              Un entorno sobrio, limpio y profesional para bajar la tensión y
+              recibir atención personalizada.
             </p>
           </div>
         </div>
@@ -51,7 +54,7 @@ import spaceImage from "../../assets/images/space-wellness.webp";
           <h2
             class="heading text-balance text-5xl font-semibold leading-[0.95] md:text-7xl"
           >
-            Diseñado para que el cuerpo pueda descansar.
+            Un entorno sobrio para recuperar cuerpo y mente.
           </h2>
         </Reveal>
 
@@ -60,15 +63,16 @@ import spaceImage from "../../assets/images/space-wellness.webp";
             class="mt-8 space-y-6 text-lg leading-8 text-[var(--color-muted)]"
           >
             <p>
-              Armonía & Bienestar propone una experiencia tranquila, profesional
-              y sin excesos visuales. Un espacio pensado para entrar en pausa,
-              recibir atención personalizada y recuperar una sensación de calma.
+              Armonía & Bienestar propone una experiencia moderna, reservada y
+              sin artificios. Un lugar pensado para hombres que buscan
+              relajación, recuperación física y cuidado personal en un entorno
+              profesional.
             </p>
 
             <p>
-              La estética acompaña la experiencia: tonos cálidos, ambiente
-              limpio, ritmo sereno y una atención enfocada en que cada persona
-              se sienta cómoda desde el primer momento.
+              La estética acompaña la experiencia: tonos cálidos, superficies
+              limpias, ritmo pausado y una atención enfocada en que cada sesión
+              se sienta cómoda, discreta y efectiva.
             </p>
           </div>
         </Reveal>
@@ -76,25 +80,27 @@ import spaceImage from "../../assets/images/space-wellness.webp";
         <div class="mt-10 grid gap-4 sm:grid-cols-2">
           <Reveal delay={0.32}>
             <div
-              class="h-full rounded-3xl border border-black/10 bg-white/35 p-6"
+              class="h-full rounded-3xl border border-black/10 bg-white/35 p-6 transition duration-500 hover:bg-white/55"
             >
               <p class="text-sm uppercase tracking-[0.22em] text-black/40">
                 ambiente
               </p>
 
-              <p class="mt-3 text-xl font-medium">Cálido y minimalista</p>
+              <p class="mt-3 text-xl font-medium">Sobrio y reservado</p>
             </div>
           </Reveal>
 
           <Reveal delay={0.4}>
             <div
-              class="h-full rounded-3xl border border-black/10 bg-white/35 p-6"
+              class="h-full rounded-3xl border border-black/10 bg-white/35 p-6 transition duration-500 hover:bg-white/55"
             >
               <p class="text-sm uppercase tracking-[0.22em] text-black/40">
                 enfoque
               </p>
 
-              <p class="mt-3 text-xl font-medium">Atención personalizada</p>
+              <p class="mt-3 text-xl font-medium">
+                Profesional y personalizado
+              </p>
             </div>
           </Reveal>
         </div>

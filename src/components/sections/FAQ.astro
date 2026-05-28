@@ -3,8 +3,15 @@ import { faq } from "../../data/faq";
 import Reveal from "../motion/Reveal.astro";
 ---
 
-<section class="relative bg-[var(--color-bg-soft)] py-24 md:py-32">
-  <div class="container max-w-4xl">
+<section
+  class="relative overflow-hidden bg-[var(--color-bg-soft)] py-24 md:py-32"
+>
+  <div
+    class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(126,217,87,0.06),transparent_28rem)]"
+  >
+  </div>
+
+  <div class="container relative max-w-4xl">
     <div class="text-center">
       <Reveal>
         <p
@@ -21,24 +28,38 @@ import Reveal from "../motion/Reveal.astro";
           Preguntas frecuentes
         </h2>
       </Reveal>
+
+      <Reveal delay={0.16}>
+        <p
+          class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[var(--color-muted)]"
+        >
+          Información útil sobre reservas, tratamientos y modalidad de atención.
+        </p>
+      </Reveal>
     </div>
 
     <div class="mt-16 space-y-4">
       {
         faq.map((item, index) => (
           <Reveal delay={0.08 + index * 0.06}>
-            <details class="group rounded-[1.75rem] border border-black/10 bg-white/40 p-7 transition duration-300 hover:bg-white/55">
+            <details class="group rounded-[1.9rem] border border-black/8 bg-white/45 p-7 transition duration-500 hover:bg-white/65">
               <summary class="flex cursor-pointer list-none items-center justify-between gap-6">
-                <span class="text-lg font-medium">{item.question}</span>
+                <span class="pr-4 text-lg font-medium leading-7">
+                  {item.question}
+                </span>
 
-                <span class="text-2xl text-black/35 transition duration-300 group-open:rotate-45">
+                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-black/8 bg-black/[0.03] text-2xl text-black/35 transition duration-500 group-open:rotate-45 group-open:bg-[var(--color-accent)] group-open:text-black">
                   +
                 </span>
               </summary>
 
-              <p class="mt-5 max-w-2xl leading-7 text-[var(--color-muted)]">
-                {item.answer}
-              </p>
+              <div class="grid transition-all duration-500 ease-out group-open:grid-rows-[1fr] grid-rows-[0fr]">
+                <div class="overflow-hidden">
+                  <p class="mt-5 max-w-2xl leading-7 text-[var(--color-muted)]">
+                    {item.answer}
+                  </p>
+                </div>
+              </div>
             </details>
           </Reveal>
         ))
