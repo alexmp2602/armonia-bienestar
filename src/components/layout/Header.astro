@@ -1,5 +1,6 @@
 ---
 import Button from "../ui/Button.astro";
+import logo from "../../assets/images/logo-horizontal-sin-fondo.webp";
 ---
 
 <header
@@ -11,7 +12,7 @@ import Button from "../ui/Button.astro";
       class="flex items-center gap-3"
       aria-label="Armonía & Bienestar"
     >
-      <img src="/src/assets/images/logo-horizontal-sin-fondo.webp" alt="Armonía & Bienestar" class="h-12 w-auto" />
+      <img src={logo.src} alt="Armonía & Bienestar" class="h-12 w-auto" />
     </a>
 
     <nav class="hidden items-center gap-8 text-sm text-black/70 md:flex">
