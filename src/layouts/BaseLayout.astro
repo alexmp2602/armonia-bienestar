@@ -3,19 +3,19 @@ import "../styles/global.css";
 import RevealScript from "../components/motion/RevealScript.astro";
 
 const {
-  title = "Armonía & Bienestar | Bienestar Masculino Premium",
-  description = "Masajes, recuperación corporal y cuidado personal masculino en un espacio moderno, sobrio y diseñado para desconectar.",
+  title = "Armonía & Bienestar | Masajes y Bienestar Masculino en Mendoza",
+  description = "Masajes, recuperación corporal y cuidado personal masculino en Mendoza. Un espacio moderno, reservado y profesional pensado para el bienestar y la relajación.",
   image = "/og-image.jpg",
-  url = "https://armonia-bienestar.vercel.app/",
+  url = "https://armoniaybienestar.com/",
 } = Astro.props;
 
 const canonicalUrl = url.endsWith("/") ? url : `${url}/`;
+const imageUrl = new URL(image, canonicalUrl).toString();
 ---
 
 <!doctype html>
 <html lang="es-AR">
   <head>
-    <!-- Basic -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -26,33 +26,28 @@ const canonicalUrl = url.endsWith("/") ? url : `${url}/`;
     <meta name="theme-color" content="#F5F2ED" />
     <meta name="format-detection" content="telephone=no" />
 
-    <!-- Canonical -->
     <link rel="canonical" href={canonicalUrl} />
 
-    <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_AR" />
     <meta property="og:site_name" content="Armonía & Bienestar" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:image" content={image} />
+    <meta property="og:image" content={imageUrl} />
     <meta
       property="og:image:alt"
       content="Armonía & Bienestar, bienestar masculino premium"
     />
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={image} />
+    <meta name="twitter:image" content={imageUrl} />
 
-    <!-- Structured data -->
     <script
       type="application/ld+json"
       set:html={JSON.stringify({
@@ -61,7 +56,7 @@ const canonicalUrl = url.endsWith("/") ? url : `${url}/`;
         name: "Armonía & Bienestar",
         description,
         url: canonicalUrl,
-        image,
+        image: imageUrl,
         telephone: "+5492616215017",
         address: {
           "@type": "PostalAddress",
@@ -70,6 +65,27 @@ const canonicalUrl = url.endsWith("/") ? url : `${url}/`;
           addressRegion: "Mendoza",
           addressCountry: "AR",
         },
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+            ],
+            opens: "09:00",
+            closes: "21:00",
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: "Sunday",
+            opens: "10:00",
+            closes: "18:00",
+          },
+        ],
         areaServed: "Mendoza, Argentina",
         sameAs: [],
       })}
