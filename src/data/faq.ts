@@ -6,6 +6,12 @@ export const faq = [
   },
 
   {
+    question: "¿Cuáles son los horarios de atención?",
+    answer:
+      "Atendemos de lunes a sábados de 9:00 a 21:00 hs y los domingos de 10:00 a 18:00 hs. Los horarios durante feriados pueden variar.",
+  },
+
+  {
     question: "¿Los tratamientos son personalizados?",
     answer:
       "Sí. Cada sesión se adapta al nivel de tensión, necesidad corporal y objetivo de bienestar de cada persona.",

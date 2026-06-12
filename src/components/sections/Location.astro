@@ -7,6 +7,8 @@ const mapsUrl =
 
 const whatsappUrl =
   "https://wa.me/5492616215017?text=Hola%2C%20quiero%20consultar%20por%20un%20turno%20en%20Armon%C3%ADa%20%26%20Bienestar";
+
+const instagramUrl = "https://www.instagram.com/armonia.bienestar.masajes/";
 ---
 
 <section class="relative overflow-hidden bg-[var(--color-bg)] py-24 md:py-32">
@@ -54,7 +56,21 @@ const whatsappUrl =
           </div>
         </Reveal>
 
-        <Reveal delay={0.32}>
+        <Reveal delay={0.28}>
+          <p class="mt-6 text-sm leading-6 text-[var(--color-muted)]">
+            También podés encontrarnos en{" "}
+            <a
+              href={instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-medium text-[var(--color-text)] transition duration-300 hover:text-[var(--color-accent-dark)]"
+            >
+              Instagram
+            </a>
+          </p>
+        </Reveal>
+
+        <Reveal delay={0.34}>
           <div
             class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-black/40"
           >
@@ -87,9 +103,9 @@ const whatsappUrl =
 
       <Reveal delay={0.18} y={28}>
         <div
-          class="rounded-[2rem] border border-black/8 bg-[var(--color-bg-soft)] p-8"
+          class="rounded-[2rem] border border-black/8 bg-[var(--color-bg-soft)] p-7 lg:p-8"
         >
-          <div class="space-y-8">
+          <div class="space-y-4">
             <div>
               <p
                 class="text-sm font-medium uppercase tracking-[0.22em] text-black/40"
@@ -121,6 +137,22 @@ const whatsappUrl =
               >
                 +54 9 261 621 5017
               </a>
+            </div>
+
+            <div class="h-px w-full bg-black/10"></div>
+
+            <div>
+              <p
+                class="text-sm font-medium uppercase tracking-[0.22em] text-black/40"
+              >
+                Horarios
+              </p>
+
+              <p class="mt-3 leading-7 text-[var(--color-muted)]">
+                Lunes a sábados de 9:00 a 21:00 hs.
+                <br />
+                Domingos de 10:00 a 18:00 hs.
+              </p>
             </div>
 
             <div class="h-px w-full bg-black/10"></div>

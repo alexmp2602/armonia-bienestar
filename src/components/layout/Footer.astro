@@ -1,6 +1,11 @@
 ---
 import Reveal from "../motion/Reveal.astro";
 import logo from "../../assets/images/logo-horizontal-dark.png";
+import {
+  Instagram,
+  MapPin,
+  Phone,
+} from "lucide-astro";
 ---
 
 <footer
@@ -83,21 +88,35 @@ import logo from "../../assets/images/logo-horizontal-dark.png";
                 href="https://wa.me/5492616215017"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="transition duration-300 hover:text-white"
+                class="inline-flex items-center gap-2 transition duration-300 hover:text-white md:justify-end"
               >
-                +54 9 261 621 5017
+                <Phone size={16} strokeWidth={1.75} />
+                <span>+54 9 261 621 5017</span>
               </a>
 
               <a
                 href="https://www.google.com/maps/search/?api=1&query=Avenida+Pedro+Molina+789+Mendoza"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="transition duration-300 hover:text-white"
+                class="inline-flex items-center gap-2 transition duration-300 hover:text-white md:justify-end"
               >
-                Avenida Pedro Molina 789
+                <MapPin size={16} strokeWidth={1.75} />
+                <span>Avenida Pedro Molina 789</span>
               </a>
 
-              <span> Ciudad, Mendoza </span>
+              <span class="text-white/45">
+                Ciudad, Mendoza
+              </span>
+
+              <a
+                href="https://www.instagram.com/armonia.bienestar.masajes/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 transition duration-300 hover:text-white md:justify-end"
+              >
+                <Instagram size={16} strokeWidth={1.75} />
+                <span>Instagram</span>
+              </a>
             </div>
           </div>
         </div>
@@ -111,7 +130,12 @@ import logo from "../../assets/images/logo-horizontal-dark.png";
         class="mt-8 flex flex-col gap-4 text-sm text-white/35 md:flex-row md:items-center md:justify-between"
       >
         <p>
-          © {new Date().getFullYear()} Armonía & Bienestar. Todos los derechos reservados.
+          © {new Date().getFullYear()} Armonía & Bienestar. Todos los derechos
+          reservados.
+        </p>
+
+        <p>
+          Diseñado para una experiencia de bienestar premium.
         </p>
       </div>
     </Reveal>
