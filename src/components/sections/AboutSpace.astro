@@ -1,6 +1,7 @@
 ---
 import Reveal from "../motion/Reveal.astro";
-import spaceImage from "../../assets/images/space-wellness-4x5.webp";
+import spaceImageOne from "../../assets/images/space-real-01.webp";
+import spaceImageTwo from "../../assets/images/space-real-02.webp";
 ---
 
 <section
@@ -12,31 +13,42 @@ import spaceImage from "../../assets/images/space-wellness-4x5.webp";
       class="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-20"
     >
       <Reveal y={32}>
-        <div
-          class="relative overflow-hidden rounded-[2.5rem] bg-[#ddd6cd] shadow-2xl shadow-black/[0.06]"
-        >
-          <img
-            src={spaceImage.src}
-            alt="Interior sobrio y premium de Armonía & Bienestar"
-            class="aspect-[4/5] h-full w-full object-cover"
-          />
-
+        <div class="grid gap-4 sm:grid-cols-[1.15fr_0.85fr]">
           <div
-            class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent"
+            class="relative overflow-hidden rounded-[2.5rem] bg-[#ddd6cd] shadow-2xl shadow-black/[0.06]"
           >
+            <img
+              src={spaceImageOne.src}
+              alt="Espacio real de atención de Armonía & Bienestar"
+              class="aspect-[4/5] h-full w-full object-cover"
+            />
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent"
+            >
+            </div>
+
+            <div
+              class="absolute bottom-5 left-5 right-5 rounded-[1.5rem] border border-white/10 bg-white/55 p-5 backdrop-blur-md"
+            >
+              <p class="text-sm uppercase tracking-[0.22em] text-black/45">
+                espacio real
+              </p>
+
+              <p class="mt-3 max-w-sm text-lg leading-7 text-black/75">
+                Un entorno reservado y preparado para cada sesión.
+              </p>
+            </div>
           </div>
 
           <div
-            class="absolute bottom-6 left-6 right-6 rounded-[1.75rem] border border-white/10 bg-white/55 p-5 backdrop-blur-md"
+            class="overflow-hidden rounded-[2rem] bg-[#ddd6cd] shadow-xl shadow-black/[0.05]"
           >
-            <p class="text-sm uppercase tracking-[0.22em] text-black/45">
-              espacio reservado
-            </p>
-
-            <p class="mt-3 max-w-sm text-lg leading-7 text-black/75">
-              Un entorno sobrio, limpio y profesional para bajar la tensión y
-              recibir atención personalizada.
-            </p>
+            <img
+              src={spaceImageTwo.src}
+              alt="Camilla y ambiente de Armonía & Bienestar"
+              class="aspect-[4/5] h-full w-full object-cover"
+            />
           </div>
         </div>
       </Reveal>
